@@ -68,8 +68,8 @@ export const App: React.FC = () => {
             <div className="block">
               <TodoFilter
                 selectedStatus={filterByStatus}
-                onSelectedStatus={newStatus =>
-                  setFilterByStatus(newStatus as Status)
+                onSelectedStatus={(newStatus: Status) =>
+                  setFilterByStatus(newStatus)
                 }
                 searchValue={search}
                 onSearchValue={searchValue => setSearch(searchValue)}

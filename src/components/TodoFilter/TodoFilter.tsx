@@ -2,7 +2,7 @@ import React from 'react';
 import { Status } from '../../types/Status';
 
 type Props = {
-  onSelectedStatus: (status: string) => void;
+  onSelectedStatus: (status: Status) => void;
   selectedStatus: Status;
   searchValue: string;
   onSearchValue: (searchValue: string) => void;
@@ -21,7 +21,7 @@ export const TodoFilter = ({
       <span className="select">
         <select
           data-cy="statusSelect"
-          onChange={event => onSelectedStatus(event.target.value)}
+          onChange={event => onSelectedStatus(event.target.value as Status)}
           value={selectedStatus}
         >
           <option value="all">All</option>
